@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="imgs/flower-logo.jpg" alt="flower-logo">
+        </div>
+        <nav>
+            <ul id="p-menu">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Presentation</a></li>
+                <li><a href="#flowers">Bouquets de fleurs</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="phone-menu">
+            <label for="ch" id="lbl"><i class="fa-solid fa-bars fa-2xl" id="lbl-i"></i></label>
+            <input type="checkbox" id="ch">
+        </div>
+    </header>
+
+    <div class="bg-page">
+        <img src="imgs/bg-flower.jpg" alt="bg ">
+    </div>
+    <main>
+        <h1>Notre selction de fleurs et de planets</h1>
+
+        <section id="flowers">
+            <div>
+                <img src="imgs/flower1.jpg" alt="flower3">
+                <p class="flower-name">Glamour: 12 fleurs sans vase</p>
+                <p class="flower-price">190,00 Dhs</p>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Commander</a>
+            </div>
+            <div>
+                <img src="imgs/flower2.jpg" alt="flower3">
+                <p class="flower-name">Purete: 15 fleurs blanches</p>
+                <p class="flower-price">250,00 Dhs</p>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Commander</a>
+            </div>
+            <div>
+                <img src="imgs/flower3.jpg" alt="flower3">
+                <p class="flower-name">Millee pensees: 12 fleurs rouges</p>
+                <p class="flower-price">300,00 Dhs</p>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Commander</a>
+            </div>
+
+        </section>
+
+        <section id="contact">
+            <h2>Nous contacter</h2>
+            <div class="form-container">
+                <div>
+                    <p>Pour toute questions vous pouvez utlisier le formulaire de contact, nous vous repondrons dans les
+                        meilleurs details. Vous pouvez egalement nous rendre visite!</p>
+                    <address>
+                        <p><i class="fa-solid fa-house"></i> Addresse: Rabat</p>
+                        <p><i class="fa-regular fa-mobile"></i> Telephone: 06 00 00 00</p>
+                        <p><i class="fa-solid fa-envelope"></i> Email: contact@boutiqueFleurs.ma</p>
+                    </address>
+                </div>
+                <fieldset>
+                    <p>Formulaire de contact</p>
+                    <form action="#" method="#">
+                        <input type="text" name="nom" aria-label="nom" placeholder="Votre nom">
+                        <input type="text" name="prenom" aria-label="nom" placeholder="Votre prenom">
+                        <input type="email" name="email" aria-label="email" placeholder="Votre Email">
+                        <input type="tel" name="phone" aria-label="phone" placeholder="Votre telephone">
+                        <textarea name="message" cols="30" rows="6" aria-label="message"
+                            placeholder="votre message"></textarea>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </fieldset>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2021 la boutique de fleurss</p>
+        <p>fleuriste maroc en ligne-livraison 7/7</p>
+    </footer>
+
+    <script>
+        document.getElementById("lbl").onclick = function () {
+            let isChecked = document.getElementById("ch").checked;
+            if (isChecked) {
+                document.getElementById("p-menu").style.transform = "translate(0)";
+                document.getElementById("lbl-i").style.color = "red";
+
+
+            }
+            else {
+                document.getElementById("p-menu").style.transform = "translate(100%)";
+                document.getElementById("lbl-i").style.color = "black";
+            }
+        }
+
+        document.body.addEventListener("dblclick", function () {
+            document.getElementById("p-menu").style.transform = "translate(100%)";
+            document.getElementById("lbl-i").style.color = "black";
+        });
+    </script>
+</body>
+
+</html>
